@@ -129,19 +129,19 @@ public class Board
   {
     String msg = "";
 
-      if (row1 >= 0 && row1 < gameboard.length && col1 >= 0 && col1 < gameboard[0].length && row2 >= 0 && row2 < gameboard.length && col2 >= 0 && col2 < gameboard[0].length) {
-          if (gameboard[row1][col1].value.equals(gameboard[row2][col2].value)) {
-              gameboard[row1][col1].matched = true;
-              gameboard[row2][col2].matched = true;
-              return "Matched";
-          } else {
-              gameboard[row1][col1].hidden = true;
-              gameboard[row2][col2].hidden = true;
-              return "";
-          }
-      }
+    if (row1 >= 0 && row1 < gameboard.length && col1 >= 0 && col1 < gameboard[0].length && row2 >= 0 && row2 < gameboard.length && col2 >= 0 && col2 < gameboard[0].length) {
+        if (gameboard[row1][col1].value.equals(gameboard[row2][col2].value)) {
+            gameboard[row1][col1].matched = true;
+            gameboard[row2][col2].matched = true;
+            return "Matched";
+        } else {
+            gameboard[row1][col1].hidden = true;
+            gameboard[row2][col2].hidden = true;
+            return "";
+        }
+    }
     
-     return "invalid input, please try again";
+    return "invalid input, please try again";
   }
 
   /** 
