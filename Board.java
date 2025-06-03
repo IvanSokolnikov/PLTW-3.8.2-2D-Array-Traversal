@@ -25,13 +25,11 @@ public class Board
    */
   public Board()
   {
-   
     for (int r = 0; r < 3; r++) {
         for (int c = 0; c < 4; c++) {
             gameboard[r][c] = new Tile(tileValues[r * 4 + c]);
         }
     }
-
   }
 
  /** 
@@ -104,8 +102,7 @@ public class Board
    * @param column the column value of Tile
    */
   public void showValue (int row, int column)
-  {
-   
+  {  
     if (row >= 0 && row < gameboard.length && column >= 0 && column < gameboard[0].length) {
         gameboard[row][column].hidden = false;
     }
@@ -132,8 +129,7 @@ public class Board
   {
     String msg = "";
 
-      if (row1 >= 0 && row1 < gameboard.length && col1 >= 0 && col1 < gameboard[0].length &&
-              row2 >= 0 && row2 < gameboard.length && col2 >= 0 && col2 < gameboard[0].length) {
+      if (row1 >= 0 && row1 < gameboard.length && col1 >= 0 && col1 < gameboard[0].length && row2 >= 0 && row2 < gameboard.length && col2 >= 0 && col2 < gameboard[0].length) {
           if (gameboard[row1][col1].value.equals(gameboard[row2][col2].value)) {
               gameboard[row1][col1].matched = true;
               gameboard[row2][col2].matched = true;
@@ -158,7 +154,6 @@ public class Board
    */
   public boolean validateSelection(int row, int col)
   {
-
       if (row >= 0 && row < gameboard.length && col >= 0 && col < gameboard[0].length) {
           if (!gameboard[row][col].isMatched()) {
               return true;
@@ -167,5 +162,4 @@ public class Board
 
     return false;
   }
-
 }
