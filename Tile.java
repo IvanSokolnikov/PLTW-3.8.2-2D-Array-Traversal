@@ -8,7 +8,7 @@ public class Tile {
     }
 
     public boolean isShowing() {
-        return !hidden;
+        return !(hidden);
     }
 
     public boolean isMatched() {
